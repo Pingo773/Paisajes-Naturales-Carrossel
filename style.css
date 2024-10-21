@@ -1,0 +1,140 @@
+@font-face {
+    font-family: LondrinaSketch;
+    src: url(./LondrinaSketch-Regular.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(12, 177, 12); */
+    /* background: linear-gradient(90deg, #0fcc83, #2ec72e); */
+    animation: colortransicion 5s infinite alternate;
+}
+
+@keyframes colortransicion {
+    0%{
+        background-color: rgb(191, 123, 157);
+    }
+
+    50%{
+        background-color: #79c90f;
+    }
+    
+    100%{
+        background-color: #146eaa;
+    }
+}
+
+
+h1 {
+    font-family: LondrinaSketch;
+    font-weight: 900;
+    font-size: 4.5em;
+    text-align: center;
+    text-shadow: 2px 2px 0px white;
+}
+
+.container {
+    height: 460px;
+    width: 800px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 10px black;
+}
+
+.imagem img {
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    display: none;
+}
+
+.bar {
+    background-color: rgb(255, 255, 255);
+    width: 35px;
+    height: 7px;
+    margin: 5px;
+    border: 1px black solid;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bar:hover {
+    background-color: #0fcc83;
+}
+
+.navegacao {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%);
+}
+
+.imagens {
+    display: flex;
+    height: 100%;
+    width: 800%;
+}
+
+.imagem {
+    width: 12.5%;
+    transition: all 0.7s;
+}
+
+#imagem1:checked~.img1 {
+    margin-left: 0;
+}
+
+#imagem2:checked~.img1 {
+    margin-left: -12.5%;
+}
+
+#imagem3:checked~.img1 {
+    margin-left: -25%;
+}
+
+#imagem4:checked~.img1 {
+    margin-left: -37.5%;
+}
+
+#imagem5:checked~.img1 {
+    margin-left: -50%;
+}
+
+#imagem6:checked~.img1 {
+    margin-left: -62.5%;
+}
+
+#imagem7:checked~.img1 {
+    margin-left: -75%;
+}
+
+#imagem8:checked~.img1 {
+    margin-left: -87.5%;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
